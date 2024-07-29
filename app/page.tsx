@@ -17,6 +17,7 @@ const Home = () => {
         <Hero />
         <RecentProjects/>
         <Grid/>
+        
         <Experience/>
         <Approach/>
         <Footer/>
