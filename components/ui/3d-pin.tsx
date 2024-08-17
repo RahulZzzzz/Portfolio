@@ -170,6 +170,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export const PinContainer = ({
   children,
@@ -195,6 +196,20 @@ export const PinContainer = ({
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
 
+  const handleClick = ()=>{
+    if(href=="under-construction"){
+      toast("Currently Building",{
+        description: "This Website is under Construction",
+        action: {
+            label: "Okay",
+            onClick: () => {},
+        }
+      });
+    }else{
+      window.open(href, '_blank');
+    }
+  }
+
   return (
     <div
       className={cn(
@@ -203,7 +218,7 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={()=>{window.open(href, '_blank');}}
+      onClick={handleClick}
     >
       {/* <Link href={href || "#"} passHref> */}
       <div

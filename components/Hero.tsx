@@ -38,7 +38,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hii I am Rahul Kumar, a Next.js Developer based in New Delhi.
+            Hii I am Rahul Kumar, a Full Stack Developer based in New Delhi.
           </p>
 
           <a href="#about">
